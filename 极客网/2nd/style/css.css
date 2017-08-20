@@ -1,0 +1,275 @@
+/*重置默认样式*/
+* {
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+}
+li {
+	list-style: none;
+}
+body {
+	width: 100%;
+	text-align: center;
+}
+/*header*/
+.header {
+	position: relative;
+	width: 1000px;
+	height: 68px;
+	margin: 0 auto;
+}
+.header img {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.header div {
+	position: absolute;
+	right: 0;
+	top: 50%;
+}
+.header div a {
+	text-decoration: none;
+	font-size: 14px;
+	color: #999;
+}
+.header div a:first-child{
+	margin-right: 30px;
+}
+.header div a:hover {
+	color: #bed742;
+}
+/*header end*/
+/*banner*/
+#banner {
+	width: 100%;
+	height: 527px;
+	overflow: hidden;
+	position: relative;
+}
+#banner_ul {
+	height: 527px;
+	width: auto;
+	max-width: 10000px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+#banner_ul img {
+	width: auto;
+	height: 527px;
+}
+#banner_ul li {
+	width: auto;
+	height: 527px;
+	float: left;
+}
+
+#banner_left {
+	width: 60px;
+	height: 59px;
+	background: url(../img/left.png) no-repeat;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 50%;
+	cursor: pointer;
+}
+#banner_right {
+	width: 60px;
+	height: 59px;
+	background:url(../img/right.png) no-repeat;
+	position: absolute;
+	z-index: 1;
+	right: 0;
+	top: 50%; 
+	cursor: pointer;
+}
+#banner_list {
+	position: absolute;
+	z-index: 1;
+	bottom: 10px;
+	left: calc(50% - 30px);
+}
+#banner_list li {
+	width: 14px;
+	height: 14px;
+	margin: 0 3px;
+	display: inline-block;
+	border-radius: 50%;
+	background: rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+#banner_list li:hover {
+	background: #fff;
+}
+/*banner end*/
+/*wrap*/
+.wrap {
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 60px;
+}
+#search {
+	width: 70%;
+	margin: 0 auto;
+	position: relative;
+}
+#search_msg {
+	font-size: 14px;
+	color: #999;
+	text-align: center;
+	padding-top: 2px;
+	visibility: hidden;
+}
+#search [type=text] {
+	width: 100%;
+	height: 34px;
+	margin-left: -104px;
+}
+#search [type=button] {
+	width: 100px;
+	height: 36px;
+	font-size: 18px;
+	background: #bed742;
+	border: none;
+	border-radius: 6px;
+	position: absolute;
+	right: -50px;
+	top: 1px;
+}
+#list {
+	width: 40%;
+	margin: 60px auto;
+	border: 1px solid #999;
+	position: relative;
+	padding: 54px 0 30px;
+	visibility: hidden;
+}
+#list p {
+	position: absolute;
+	left: -1px;
+	top: 24px;
+	width: 126px;
+	height: 30px;
+	line-height: 30px;
+	background: #bed742;
+}
+#list ul {
+	zoom: 1;
+}
+#list ul:after {
+	clear: both;
+	content: "";
+	display: block;
+	visibility: hidden;
+}
+#list ul li {
+	float: left;
+	width: 50%;
+	margin: 16px 0;
+
+}
+#list ul li a {
+	text-decoration: none;
+	color: #666;
+	font-size: 16px;
+}
+#list ul li a:hover {
+	color: #bed742;
+}
+/*wrap end*/
+/*footer*/
+.footer {
+	width: 850px;
+	margin: 0 auto;
+	border-top: 1px solid #999;
+	margin-bottom: 60px;
+}
+.footer ul {}
+.footer ul li {
+	display: inline-block;
+	font-size: 16px;
+	line-height: 16px;
+	margin: 6px 0;
+	color: #999;
+	padding-right: 2px;
+	border-right: 1px solid #999;
+}
+.footer ul li:nth-child(5) {
+	border: none;
+}
+.footer ul li:last-child {
+	border: none;
+	display: block;
+}
+/*footer end*/
+/*login*/
+#login {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 5;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,0.5);
+	display: none;
+}
+#login_0 {
+	width: 516px;
+	height: 322px;
+	position: fixed;
+	background: #fff;
+	left: calc(50% - 258px);
+	top: calc(50% - 161px);
+}
+#login_0 p {
+	font-size: 24px;
+	font-weight: bolder;
+	text-align: left;
+	padding: 60px 0 0 154px;
+}
+#login_0 span {
+	color: #666;
+	font-size: 18px;
+	position: absolute;
+	left: 86px;
+}
+#login_0 input {
+	width: 240px;
+	height: 26px;
+	position: absolute;
+	box-shadow: inset 0px 0px 1px #bcbcbc;
+}
+#login_0 input:first-of-type,#login_0 input:nth-of-type(2) {
+	left: 154px;
+}
+#login_0 span:first-of-type,#login_0 input:first-of-type {
+	top: 116px;
+}
+#login_0 span:last-of-type,#login_0 input:nth-of-type(2) {
+	top: 166px;
+}
+#login_0 input:nth-of-type(3) {
+	height: 40px;
+	background: #bed742;
+	font-size: 18px;
+	border: none;
+	border-radius: 8px;
+	left: 154px;
+	top: 222px;
+	cursor: pointer;
+}
+#login_0 input:nth-of-type(4) {
+	width: 30px;
+	height: 30px;
+	background: #f00;
+	font-size: 18px;
+	color: #fff;
+	outline: none;
+	cursor: pointer;
+	border: none;
+	right: 0;
+	top: 0;
+}
+/*login end*/
