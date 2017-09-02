@@ -1,0 +1,36 @@
+body div ul {
+    padding: 0;
+    margin: 0;   
+}
+#ul_1 {
+    width: 150px;
+    margin: 0 auto;
+}
+li {
+    list-style: none;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+li {
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+li:hover {
+    color: #f00;
+}
+#div_1 {
+    width: 200px;
+    height: 200px;
+    background: rgba(0,0,0,0.3);
+    margin: 20px auto;
+    text-align: center;
+    line-height: 200px;
+}
+#input_0 {
+    margin: 0 auto;
+    display: block;
+    font-size: 16px;
+}
