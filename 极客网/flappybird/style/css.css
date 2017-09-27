@@ -8,7 +8,7 @@ li {
 #wrap {
 	width: 343px;
 	height: 480px;
-	margin: 80px auto;
+	margin: 80px auto 0;
 	overflow: hidden;
 	background: url(../img/bg.jpg) no-repeat;
 	position: relative;
@@ -121,4 +121,15 @@ li {
 }
 #ok {
 	cursor: pointer;
+}
+.help {
+	width: 343px;
+	margin: 0 auto;
+	text-align: center;
+}
+.help p {
+	display: inline-block;
+}
+#help {
+	display: inline-block;
 }

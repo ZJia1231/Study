@@ -40,7 +40,7 @@ $(document).ready(function($) {
 		$("#begin").hide();
 		$Bird.fadeIn();
 		$('#score').fadeIn();
-		BFlytimer = setInterval(BirdFly,30);
+		BFlyTimer = setInterval(BirdFly,30);
 		AddPipeTimer = setInterval(AddPipe,1600);
 		PipesMoveTimer = setInterval(PipesMove,30);
 	}
@@ -55,7 +55,7 @@ $(document).ready(function($) {
 	var BirdTimer = null; 
 	BirdTimer = setInterval(BirdPic(aBirdPic[0],aBirdPic[1]),150);
 
-	var BFlytimer = null;
+	var BFlyTimer = null;
 	
 	
 	function BirdFly() {
@@ -91,10 +91,10 @@ $(document).ready(function($) {
 		}
 	}
 	$(document).click(function() {
-		clearInterval(BFlytimer);
+		clearInterval(BFlyTimer);
 		iSpeed = -12;
 		SpeedJudge();
-		BFlytimer = setInterval(BirdFly,30);
+		BFlyTimer = setInterval(BirdFly,30);
 	})
 
 //水管 
@@ -136,14 +136,13 @@ $(document).ready(function($) {
 			if ($Bird.position().top < parseInt($(this).find("p:first-child").height() + 60) || (423 - $Bird.position().top) < parseInt(260 - $(this).find("p:first-child").height())) {
 				//判断鸟的left值和水管的left值是否在碰撞范围
 				if (parseInt($(this).position().left) < 110 && parseInt($(this).position().left) >10) {
-					console.log($(this).find("p:first-child").height());
 					Death();
 				}
 			}
 		});
 	}
 	function Death() {
-		clearInterval(BFlytimer);
+		clearInterval(BFlyTimer);
 		clearInterval(PipesMoveTimer);
 		clearInterval(GroundMoveTimer);
 		clearInterval(AddPipeTimer);
@@ -173,5 +172,27 @@ $(document).ready(function($) {
 			$('#score').html(score);
 		}) 
 
+	}
+
+//外挂
+	var $Help = $("#help");
+	var $Wrap = $("#wrap");
+	$(document).keydown(function (e) {
+		if (e.keyCode == 32) {
+			if ($Help.is(':checked')) {
+				$Help.removeAttr('checked');
+			}
+			else {
+				$Help.attr('checked','checked');
+				$(document).unbind('click');
+				clearInterval(BFlyTimer);
+				$(document).bind('mousemove',BirdHelper);
+			}
+		}
+	})	
+	
+	function BirdHelper(e) {
+		$Bird.css('left',e.pageX -$Wrap.offset().left -20);
+		$Bird.css('top',e.pageY - $Wrap.offset().top -15);
 	}
 }); 
